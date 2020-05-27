@@ -33,8 +33,10 @@ class HomeController extends Controller
 
         $groups = Chat::getAllGroupConversations();
         $threads = Chat::getAllConversations();
+        $users = User::where('id', '!=', auth()->id())->get();
 
         return view('home')->with([
+            'users' => $users,
             'threads' => $threads,
             'groups'  => $groups
         ]);

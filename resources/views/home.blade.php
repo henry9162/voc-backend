@@ -5,6 +5,18 @@
     <div class="row">
         <div class="col-md-4">
             <ul class="list-group">
+                @foreach($users as $user)
+                    @foreach($threads as $inbox)
+                        @if($inbox->user->id === $user->id)
+                            <a href="{{ route('chat' , ['id' => $inbox->message->conversation->id]) }}">
+                                <div class="about pt-4">
+                                    <div class="name">{{$user->first_name}}</div>
+                                </div>
+                            </a>
+                        @endif
+                    @endforeach
+                @endforeach
+
                 @foreach($threads as $inbox)
                     {{--@if(!is_null($inbox->message))--}}
                         {{--<li class="list-group-item">--}}
