@@ -21,7 +21,7 @@
     "dependencies": {
         "js-cookie": "^2.2.1",
         "laravel-echo": "^1.7.0",
-        "node-sass": "^4.14.1",
+        "node-sass": "^7.0.0",
         "socket.io": "^2.3.0",
         "socket.io-client": "^2.3.0",
         "vue-chat-scroll": "^1.4.0",
